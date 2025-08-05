@@ -30,7 +30,12 @@ body{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	border-radius: 10px;
+	
+}
+
+.img img{
+	width: 500px;
+	border-radius: 20px;
 }
 
 .login-content{
@@ -38,10 +43,6 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
-}
-
-.img img{
-	width: 500px;
 }
 
 form{
@@ -180,6 +181,7 @@ a:hover{
 }
 .btn:hover{
 	background-position: right;
+	background-color: red;
 }
 
 

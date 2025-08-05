@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +14,10 @@
 	<img class="wave" src="images/wave.png">
 	<div class="container">
 		<div class="img">
-			<img src="images/Avatar.png" style="border-radius: 20px;">
+			<img src="images/Avatar.png" >
 		</div>
 		<div class="login-content">
-			<form action="Student_Dashboard/index.html">
+			<form action="login_backend.php" method="post">
 				<img src="images/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
@@ -22,14 +25,14 @@
         			<i class="fas fa-user"></i>
     			</div>
     		<div class="div">
-        		<input type="text" class="input" placeholder="Username" required>
+        		<input type="email" class="input" name = "username" placeholder="Username" required>
     		</div>
 			</div>
 			<div class="input-div pass">
     			<div class="i">
         		<i class="fas fa-lock"></i> </div>
     			<div class="div">
-        		<input type="password" class="input" placeholder="Password" required>
+        		<input type="password" class="input" name = "password" placeholder="Password" required>
     		</div>
 			
 			</div>
