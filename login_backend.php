@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    include 'assest/config.php';
 $username = $_POST['username'];
@@ -16,30 +17,21 @@ mysqli_stmt_store_result($stmt);
 	mysqli_stmt_bind_result($stmt, $id, $db_pass, $role);
 	mysqli_stmt_fetch($stmt);
 
-	if ($password === $db_pass) {  // Use password_verify if hashed
-		$_SESSION['uid'] = $id;
-		$_SESSION['role'] = $role;
-
-		// Redirect based on role
-		switch ($role) {
-			case 'admin':
-				header("Location: admin_panel/dashboard.php");
-				break;
-			case 'teacher':
-				header("Location: teacher_panel/dashboard.php");
-				break;
-			case 'student':
-				header("Location: student_panel/dashboard.php");
-				break;
-			default:
-				echo "Unknown role.";
-		}
-		exit();
-	} else {
-		echo "Invalid password.";
-	}
-	} else {
-	echo "User not found.";
-	}
+		if (password_verify($password, $db_pass)) { // Use password_verify if hashed
+            $_SESSION['uid'] = $id;
+            $_SESSION['role'] = $role;
+            // Redirect back to login.php with success and role parameters
+            header("Location: login.php?success=true&role=" . urlencode($role));
+            exit();
+        } else {
+            // Handle invalid password
+            header("Location: login.php?error=invalid_password");
+            exit();
+        }
+    } else {
+        // Handle user not found
+        header("Location: login.php?error=user_not_found");
+        exit();
+    }
 }
 ?>

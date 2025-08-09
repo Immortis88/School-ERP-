@@ -183,6 +183,9 @@ a:hover{
 	background-position: right;
 	background-color: red;
 }
+#livetoast .toast.bg-success{
+	background-color: #38d39f;
+}
 
 
 @media screen and (max-width: 1050px){
