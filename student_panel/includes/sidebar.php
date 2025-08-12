@@ -8,7 +8,7 @@
             <li><a href="teacher.php" ><i class="bx bxs-user-rectangle"></i>Teacher</a></li>
             <li><a href="student.php" ><i class="bx bxs-user-detail"></i>Student</a></li>
             <li><a href="subjects.php" ><i class="bx bx-book-bookmark"></i>Subjects</a></li>
-            <li><a href="attendence.php" ><i class="bx bx-list-check"></i>Attendance</a></li>
+            <li><a href="fetch_attendence.php" ><i class="bx bx-list-check"></i>Attendance</a></li>
             <li><a href="noticeboard.php" ><i class="bx bx-bookmark"></i>Notice Board</a></li>
             <li><a href="timetable.php" "><i class="bx bx-table"></i>Time Table</a></li>
             <li><a href="syllabus.php" ><i class="bx bx-file-blank"></i>Syllabus</a></li>

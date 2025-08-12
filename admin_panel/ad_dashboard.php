@@ -1,4 +1,4 @@
-
+<?php include("../assest/config.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/sidebar.php"); ?>
 
@@ -33,10 +33,43 @@
 
 <?php include("includes/navbar.php");?> 
 
-<div class="content">
-<main>
-    <div class="header">
-        <h1>Dashboard</h1> 
-    </div>
+  
 
+<div class="content">
+    <div class="head-title">
+        <h1>Dashboard</h1>
+    </div>
+    <ul class="box-info">
+            <li onclick="showTeacherList()">
+                <!-- <i class='bx bx-calendar-check'></i> -->
+                <i class='bx bxs-user'></i>
+                <span class="info">
+                    <h3 class="text-center" id="teacherCount">_ _ _</h3>
+                    <p>Teachers</p>
+                </span>
+            </li>
+            <li onclick="showStudentList()">
+                <i class='bx bxs-group'></i>
+                <span class="info">
+                    <h3  class="text-center" id="studentCount">_ _ _</h3>
+                    <p>Students</p>
+                </span>
+            </li>
+            <li onclick="showNotesList()">
+                <i class='bx bx-book'></i>
+                <span class="info">
+                    <h3 class="text-center"  id="classCount">_ _ _</h3>
+                    <p>Notes</p>
+                </span>
+            </li>
+            <li onclick="showNoticeList()">
+                <i class='bx bxs-bookmark'></i>
+                <span class="info">
+                    <h3 class="text-center"  id="noticeCount">_ _ _</h3>
+                    <p>Notices</p>
+                </span>
+            </li>
+        </ul>
+
+</div>
 <?php include("includes/footer.php");?>

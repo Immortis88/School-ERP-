@@ -1,20 +1,25 @@
-const allSideMenu = document.querySelectorAll('#sidebar .side-menu li a');
+const allSideMenu = document.querySelectorAll('.sidebar .side-menu li a');
+const currentPage = window.location.pathname;
 
 allSideMenu.forEach(item=>{
     const li = item.parentElement;
 
-    item.addEventListener('click',function() {
-        allSideMenu.forEach(i=>{
-            i.parentElement.classList.remove('active');
-        })
+    li.classList.remove('active');
+
+    if (item.getAttribute("href") && currentPage.includes(item.getAttribute("href"))) {
         li.classList.add('active');
-    })
+    }
+
+    item.addEventListener('click',function() {
+        allSideMenu.forEach(i => {i.parentElement.classList.remove('active')});
+        li.classList.add('active');
+    });
 });
  
 
 //toggle bar
-const menuBar = document.querySelector('#navbar nav a i.bx.bx-menu.fs-3');
-const sidebar = document.getElementById('sidebar');
+const menuBar = document.querySelector('.navbar .bar a i.bx.bx-menu.fs-3');
+const sidebar = document.querySelector('.sidebar');
 
 menuBar.addEventListener('click',function(e){
     e.preventDefault(); 
@@ -25,6 +30,10 @@ menuBar.addEventListener('click',function(e){
 if(window.innerWidth < 768){
     sidebar.classList.add('hide');
 }
+
+
+
+
 
 // function showToast(message) {
 //       const toastBody = document.getElementById('toast-alert-message');

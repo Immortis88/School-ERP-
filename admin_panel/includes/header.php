@@ -11,16 +11,7 @@
     <title>ERP Dashboard</title>
 </head>
 <body>
-    <div class='toast-container position-fixed text-success bottom-0 end-0 p-3' style="z-index: 9000;">
-    <div id='liveToast' class='toast' role='alert' aria-live='assertive' aria-atomic='true' style="color:black;">
-    <div class='d-flex'>
-      <div class='toast-body' id="toast-alert-message">
-        
-      </div>
-      <button type='button' class='btn-close me-2 m-auto text-danger' data-bs-dismiss='toast' aria-label='Close'></button>
-    </div>
-    </div>
-  </div>
+    
     
     
  
